@@ -1,0 +1,66 @@
+REGALO INTERACTIVO PARA TU PERSONA ESPECIAL ♡
+
+Esta es una mini presentación romántica de 6 pantallas, no una página larga tradicional.
+Incluye sobre animado, cambios de escena, regalos que se abren, navegación inferior, collage y un espacio para el enlace de una canción.
+
+1. COMO PROBARLO
+- Descomprime el ZIP.
+- Abre Visual Studio Code.
+- Ve a Archivo > Abrir carpeta y selecciona la carpeta Regalo_Interactivo.
+- Abre index.html en Chrome o Edge. También puedes usar Live Server.
+- Prueba el sobre, los botones ANTERIOR y SIGUIENTE, los puntos de progreso y los tres regalos.
+
+2. COMO COLOCAR TUS FOTOGRAFIAS
+No necesitas editar el código para cambiar las seis fotos si mantienes los nombres indicados.
+
+PASO A PASO:
+1) Busca las fotografías que quieras usar en tu computadora.
+2) Copia seis fotos dentro de la carpeta llamada "imagenes" (está dentro de Regalo_Interactivo).
+3) Cambia sus nombres exactamente así: foto1.jpg, foto2.jpg, foto3.jpg, foto4.jpg, foto5.jpg y foto6.jpg.
+4) Verifica que sean realmente archivos JPG/JPEG. No basta con cambiar el nombre de una foto PNG a .jpg. Si son PNG, puedes abrirlas con Paint > Archivo > Guardar como > Imagen JPEG.
+5) Vuelve a abrir o actualizar index.html. Las fotos aparecerán automáticamente en los marcos preparados.
+
+PARA QUE SEPAS DONDE APARECE CADA FOTO:
+- foto1.jpg: fotografía principal de la portada de cumpleaños y fotografía central del collage final.
+- foto2.jpg: primer recuerdo de la carta y foto izquierda del collage final.
+- foto3.jpg: segundo recuerdo de la carta.
+- foto4.jpg: tercer recuerdo de la carta y foto derecha del collage final.
+- foto5.jpg: primera fotografía de la pantalla "Message For You".
+- foto6.jpg: segunda fotografía de la pantalla "Message For You".
+
+CONSEJOS PARA QUE SE VEAN BONITAS:
+- Elige fotos donde se les vea bien la cara; los marcos recortan un poco los bordes para llenar el espacio.
+- Las fotos verticales suelen quedar bien en la portada y en los marcos pequeños.
+- Usa fotos JPG y evita nombres con espacios, tildes o caracteres especiales.
+- Puedes usar la misma foto en más de un lugar si así lo prefieres; solo copia el archivo con el nombre que corresponda.
+
+3. COMO PERSONALIZAR LOS TEXTOS
+Abre index.html en Visual Studio Code y usa Ctrl + F para buscar estos textos:
+- (AQUÍ VA TU NOMBRE)
+- (Aquí va tu texto personal)
+- (Aquí va tu mensaje largo)
+
+Selecciona solamente el texto de ejemplo y reemplázalo por tu dedicatoria. No borres las etiquetas HTML que lo rodean (por ejemplo <p>, </p> o <span>).
+
+Los mensajes que aparecen al abrir los tres regalitos se modifican en script.js, dentro del objeto "giftMessages".
+
+4. COMO PONER UNA CANCION
+En la pantalla "Message For You" hay una casilla para pegar el enlace de Spotify.
+- Copia el enlace para compartir de la canción en Spotify.
+- Pégalo en la casilla y pulsa ABRIR CANCIÓN.
+- Se abrirá Spotify en otra pestaña. No se reproduce automáticamente porque los navegadores suelen bloquear la música automática.
+
+5. PUBLICAR GRATIS EN GITHUB PAGES
+1) Entra a https://github.com e inicia sesión.
+2) Crea un repositorio nuevo llamado regalo-para-ti y selecciona Public.
+3) Sube los archivos index.html, styles.css, script.js, LEEME_PRIMERO.txt y la carpeta imagenes completa. No subas solamente el ZIP.
+4) En el repositorio, entra a Settings > Pages.
+5) En "Build and deployment" elige "Deploy from a branch".
+6) En Branch selecciona "main" y la carpeta "/ (root)". Pulsa Save.
+7) GitHub publicará el proyecto y te mostrará un enlace parecido a https://TU-USUARIO.github.io/regalo-para-ti/
+8) Abre el enlace desde tu celular para comprobar que se vea bien.
+
+IMPORTANTE: cada foto también debe subirse a GitHub dentro de la carpeta imagenes. Si olvidas subir esa carpeta, las fotos no aparecerán en el enlace público.
+
+6. ¿CANVA O VISUAL STUDIO CODE?
+Este regalo está hecho con HTML, CSS y JavaScript para que el sobre, las escenas, las animaciones y los regalos respondan a los clics. Puedes editarlo en Visual Studio Code y publicarlo gratis con GitHub Pages. No necesita PHP, servidor ni base de datos.

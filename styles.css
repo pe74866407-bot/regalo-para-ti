@@ -1,0 +1,150 @@
+:root{--paper:#f8f4e9;--paper2:#fbf8f0;--ink:#554b42;--muted:#a39a87;--rose:#d88e91;--rose2:#efc4bd;--red:#b96e75;--sage:#9fae9c;--line:#e6dece;--shadow:0 25px 70px rgba(80,61,43,.13)}
+*{box-sizing:border-box}html{min-width:320px}body{margin:0;min-height:100vh;background:#eee8dc;color:var(--ink);font-family:"DM Sans",sans-serif;display:flex;flex-direction:column;align-items:center;overflow-x:hidden}.ambient{position:fixed;z-index:0;color:#d5a3a0;opacity:.4;pointer-events:none;font-family:Georgia,serif}.ambient-one{left:3vw;top:27vh;font-size:70px;transform:rotate(-15deg)}.ambient-two{right:4vw;bottom:15vh;font-size:86px;transform:rotate(13deg)}.deck-header,.deck-footer{width:min(1240px,94vw);display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}.deck-header{height:64px}.mini-brand{font-size:9px;letter-spacing:2px;color:#978a78;display:flex;align-items:center;gap:10px}.brand-heart{color:var(--red);font-size:13px}.brand-line{height:1px;width:27px;background:#c9b9a5}.deck-status{font-size:8px;letter-spacing:1.7px;color:#a89b87}.status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9caf91;margin-right:7px;box-shadow:0 0 0 3px #9caf9120}.experience{width:min(1120px,94vw);position:relative;z-index:1;margin:7px auto 0}.paper-stage{width:100%;aspect-ratio:16/9;min-height:590px;max-height:calc(100vh - 145px);position:relative;overflow:hidden;background:var(--paper);box-shadow:var(--shadow);border:1px solid #e7dfd0}.paper-stage:before{content:"";position:absolute;inset:13px;border:1px solid #e8dfd0;pointer-events:none;z-index:3}.paper-grain{position:absolute;inset:0;z-index:2;opacity:.18;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E")}.corner{position:absolute;z-index:4;color:#cfaaa0;font-size:17px}.corner-tl{top:22px;left:24px}.corner-br{right:24px;bottom:22px;transform:rotate(180deg)}.scene{position:absolute;inset:0;z-index:1;visibility:hidden;opacity:0;pointer-events:none;transform:translateX(42px) scale(.985);transition:opacity .65s ease,transform .75s cubic-bezier(.2,.7,.2,1),visibility .65s}.scene.active{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(0) scale(1);z-index:2}.scene.leaving-left{opacity:0;transform:translateX(-45px) scale(.985);visibility:hidden}.scene.leaving-right{opacity:0;transform:translateX(45px) scale(.985);visibility:hidden}.handwritten{font-family:"Sacramento",cursive;color:var(--red);font-weight:400}.small-script{font-size:27px;margin:0 0 7px}.tiny-label{font-size:9px;letter-spacing:3px;color:#a89985}.scene-mail{display:flex;align-items:center;justify-content:center;text-align:center}.mail-content{position:relative;margin-top:-2%;z-index:1}.mail-title{font:500 clamp(45px,5.2vw,68px)/1 "Playfair Display",serif;letter-spacing:-2px;margin:17px 0 12px;color:#5e554b}.mail-title span{color:var(--rose)}.mail-subtitle{font:italic 14px "Playfair Display",serif;color:#9e927f;margin:0 0 15px}.envelope-button{border:0;background:none;cursor:pointer;padding:14px 25px 3px;position:relative;display:block;margin:0 auto}.envelope-illustration{display:block;position:relative;width:240px;height:174px;filter:drop-shadow(0 14px 12px rgba(121,82,68,.12));transition:transform .3s}.envelope-button:hover .envelope-illustration{transform:translateY(-5px) rotate(-1deg)}.envelope-glow{position:absolute;width:290px;height:175px;left:0;top:13px;background:#eccac1;opacity:.22;filter:blur(24px);border-radius:50%}.env-back{position:absolute;inset:0;background:#eabbb5;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);border:1px solid #c88c8a}.letter-peek{position:absolute;z-index:1;left:31px;top:-42px;width:178px;height:152px;background:#fffdf5;border:1px solid #e4d8c5;transform:translateY(22px);transition:transform .8s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;flex-direction:column;padding-top:23px}.letter-peek-heart{font:36px Georgia;color:#cf898a}.letter-peek-lines{width:75px;height:30px;margin-top:4px;background:repeating-linear-gradient(to bottom,transparent 0 8px,#eaded0 8px 9px)}.env-front-left{position:absolute;inset:0;background:#d99998;clip-path:polygon(0 0,50% 55%,0 100%);z-index:3}.env-front-right{position:absolute;inset:0;background:#e5aaa4;clip-path:polygon(100% 0,50% 55%,100% 100%);z-index:3}.env-front-bottom{position:absolute;inset:0;background:#efc5b9;clip-path:polygon(0 100%,50% 48%,100% 100%);z-index:4}.env-flap{position:absolute;inset:0;background:#d88f91;clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:transform .75s ease;z-index:5;filter:brightness(.99)}.wax-seal{position:absolute;z-index:6;left:calc(50% - 18px);top:75px;width:36px;height:36px;border-radius:50%;background:#b96872;color:#ffe8d9;display:grid;place-items:center;font-size:16px;box-shadow:0 2px 5px #804e4d50;transition:opacity .3s}.envelope-button.opening .env-flap{transform:rotateX(180deg);z-index:0}.envelope-button.opening .letter-peek{transform:translateY(-55px)}.envelope-button.opening .wax-seal{opacity:0}.tap-instruction{font-size:8px;letter-spacing:2px;color:#a49784;margin:18px 0 0}.tap-star{color:#d79a96;font-size:12px;margin:0 6px}.mail-postmark{position:absolute;right:-135px;top:60px;border:1px solid #ddc1b0;border-radius:50%;width:75px;height:75px;display:grid;align-content:center;color:#b88c7d;font-size:8px;letter-spacing:1px;line-height:1.4;transform:rotate(12deg)}.mail-postmark b{font-size:12px}.scene-side-note{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);font:italic 11px "Playfair Display",serif;color:#b3a58f;letter-spacing:.5px;white-space:nowrap}
+/* Birthday cover */
+.scene-birthday{background:linear-gradient(110deg,#f8f4e9 0 53%,#f3ebde 53% 100%)}.birthday-copy{position:absolute;left:9%;top:19%;width:45%;z-index:2}.birthday-copy .small-script{font-size:29px}.birthday-copy h2{font:500 clamp(52px,6.2vw,84px)/.85 "Playfair Display",serif;letter-spacing:-3px;margin:13px 0;color:#5b5148}.birthday-copy h2 span{font-style:italic;color:#bd747b}.birthday-caption{font:italic 13px "Playfair Display",serif;color:#9a8a78;margin:24px 0 12px}.underline-scribble{width:150px;height:7px;border-top:1px solid #cf9b96;border-radius:50%;transform:rotate(-2deg)}.birthday-from{font-size:8px;letter-spacing:1.7px;color:#a28d7e;margin-top:27px}.photo-frame{background:#fffdf7;padding:9px 9px 25px;box-shadow:0 12px 22px #67554520;position:relative}.photo-frame img{display:block;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:1;opacity:0;transition:opacity .3s}.photo-frame.has-image img{opacity:1}.photo-frame.has-image .photo-fallback{display:none}.photo-fallback{position:absolute;inset:9px 9px 25px;background:linear-gradient(145deg,#f1d8cd,#f9e9d9 55%,#d9c9bb);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#927d70}.photo-fallback span{font:36px Georgia;color:#fff7e8;margin-bottom:9px}.photo-fallback b{font:italic 12px "Playfair Display",serif;letter-spacing:.5px}.photo-fallback small{font-size:8px;color:#a48f80;margin-top:5px}.birthday-photo{position:absolute;width:35%;height:64%;right:10%;top:16%;transform:rotate(3deg);padding:12px 12px 37px}.birthday-photo .photo-fallback{inset:12px 12px 37px}.photo-tape{position:absolute;z-index:3;top:-13px;left:37%;width:75px;height:22px;background:#e8c2b0aa;transform:rotate(-5deg)}.photo-caption-tag{position:absolute;z-index:4;bottom:9px;right:12px;font:italic 13px "Sacramento",cursive;color:#b47c78}.birthday-stamp{position:absolute;right:6%;top:7%;border:1px solid #d7b7a6;border-radius:50%;height:80px;width:80px;display:grid;place-content:center;text-align:center;font-size:8px;letter-spacing:1px;line-height:1.4;color:#b48779;transform:rotate(12deg)}.birthday-stamp b{font-size:11px}.birthday-doodle{position:absolute;color:#ce9991}.doodle-heart{left:50%;bottom:17%;font-size:45px;transform:rotate(-15deg)}.doodle-flower{right:8%;bottom:10%;font-size:47px}.birthday-bottom-note{position:absolute;bottom:7%;left:9%;font-size:8px;letter-spacing:1.8px;color:#ae9b86}.birthday-bottom-note span{color:#c98788}
+/* Love letter */
+.scene-letter{display:grid;grid-template-columns:19% 1fr 16%;align-items:center;gap:2.3%;padding:7% 6% 6%}.letter-photos{height:83%;display:flex;flex-direction:column;justify-content:center;gap:12px;position:relative}.mini-photo{width:86%;height:27%;min-height:70px;transform:rotate(-3deg);padding:5px 5px 13px}.mini-photo .photo-fallback{inset:5px 5px 13px}.p-two{align-self:flex-end;transform:rotate(4deg)}.p-three{transform:rotate(-2deg);width:78%}.photo-rail-note{font:italic 14px "Sacramento",cursive;color:#bb8380;line-height:1.1;margin:2px 0 0 5px}.love-letter-paper{background:#fffdf5;border:1px solid #e7dfd0;box-shadow:0 10px 24px #725b4710;padding:6% 8%;height:88%;position:relative;display:flex;flex-direction:column;overflow:hidden}.love-letter-paper:before{content:"";position:absolute;inset:8px;border:1px solid #f0e7d8;pointer-events:none}.paper-topline{display:flex;justify-content:space-between;font-size:7px;letter-spacing:1.8px;color:#b1a28e}.letter-script{font-size:clamp(34px,4vw,51px);margin:12px 0 0;line-height:1}.letter-salutation{font:italic 13px "Playfair Display",serif;color:#8e7c6d;margin:17px 0 9px}.letter-copy{font:clamp(10px,1.12vw,13px)/1.8 "Playfair Display",serif;color:#817467}.letter-copy p{margin:0 0 11px}.letter-sign{font-size:30px;margin:2px 0 0}.letter-name{font:italic 11px "Playfair Display",serif;color:#a77b77;margin:0}.letter-doodle{position:absolute;bottom:8%;right:7%;font-size:43px;color:#e3beb1;transform:rotate(15deg)}.letter-decoration{height:82%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:9% 0}.tiny-envelope{height:75px;width:100px;background:#e8b9b2;position:relative;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);display:grid;place-items:center;box-shadow:0 8px 18px #765c4914}.tiny-envelope:before{content:"";position:absolute;inset:0;background:#d99796;clip-path:polygon(0 0,50% 55%,100% 0)}.tiny-envelope span{position:relative;color:#fff2e1;font-size:24px;margin-top:15px}.tic-tac{font:12px/2 "Playfair Display",serif;color:#bf8880;transform:rotate(8deg);letter-spacing:2px}.letter-side-caption{font:italic 14px "Sacramento",cursive;color:#b28a7e;writing-mode:vertical-rl;transform:rotate(180deg)}
+/* Gifts */
+.scene-gifts{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7%}.gift-heading .small-script{font-size:28px}.gift-heading h2{font:500 clamp(32px,4vw,48px) "Playfair Display",serif;margin:2px 0 9px;color:#5b5148}.gift-heading>p:last-child{font:italic 12px "Playfair Display",serif;color:#9c8f7d}.gift-row{display:grid;grid-template-columns:repeat(3,1fr);gap:5%;width:77%;margin:5% auto 0}.gift-item{border:0;background:transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;color:#66584d;transition:transform .35s}.gift-item:hover{transform:translateY(-10px) rotate(-2deg)}.gift-spot{width:clamp(105px,13vw,145px);height:clamp(105px,13vw,145px);border-radius:50%;display:grid;place-items:center;transition:transform .4s,box-shadow .4s}.gift-item:hover .gift-spot{transform:rotate(5deg) scale(1.04);box-shadow:0 12px 25px #7e67511b}.gift-spot svg{width:88%;height:82%;overflow:visible}.spot-pink{background:#f0d4ce}.spot-yellow{background:#f0e6c9}.spot-blue{background:#dce4dc}.gift-name{font:italic 18px "Playfair Display",serif;margin-top:13px}.gift-sub{font-size:7px;letter-spacing:1.6px;color:#ad8e7e;margin-top:9px}.gift-bottom{position:absolute;bottom:8%;font-size:7px;letter-spacing:2px;color:#b09b84}.gift-bottom span{color:#c77c7e;font-size:12px;margin-left:8px}
+/* Message */
+.scene-message{display:grid;grid-template-columns:1.15fr .85fr;gap:4%;padding:7% 9% 6%;align-items:center}.message-copy-wrap{position:relative;z-index:2}.message-copy-wrap .small-script{font-size:25px;margin:0}.message-title{font-size:clamp(36px,4.4vw,56px);line-height:1;margin:0 0 13px}.message-paragraph{font:clamp(10px,1.05vw,12px)/1.85 "Playfair Display",serif;color:#88786a;max-width:480px}.message-paragraph p{margin:0 0 10px}.message-sign{font-size:27px;margin:0 0 12px}.song-box{display:flex;align-items:center;gap:13px;border-top:1px solid #e4d9c9;padding-top:12px;max-width:480px}.vinyl{height:72px;width:72px;flex:none;border-radius:50%;background:repeating-radial-gradient(circle at center,#282927 0 2px,#454641 3px 4px,#242522 5px 6px);display:grid;place-items:center;animation:vinylSpin 9s linear infinite paused;box-shadow:0 4px 10px #4b3b3028}.scene-message.active .vinyl{animation-play-state:running}.vinyl-label{width:27px;height:27px;border-radius:50%;background:#d99c94;color:#fff0df;display:grid;place-items:center;font-size:13px}.song-text{display:flex;flex-direction:column;gap:4px;min-width:0}.song-text>b{font-size:7px;letter-spacing:1.6px;color:#a88e7b}.song-text>span{font:italic 10px "Playfair Display",serif;color:#9c8c7c}.song-actions{display:flex;gap:5px;margin-top:4px}.song-actions input{width:145px;min-width:0;border:1px solid #e7d9ca;background:#fffaf1;padding:6px 7px;font:9px "DM Sans",sans-serif;color:#78685e;outline:none}.song-actions input:focus{border-color:#d59d98}.song-actions button{border:0;background:#dba5a0;color:#fffaf0;padding:0 9px;font-size:7px;letter-spacing:.8px;cursor:pointer}.message-photo-stack{height:83%;position:relative;display:flex;align-items:center;justify-content:center}.stack-photo{position:absolute;width:68%;height:76%;padding:8px 8px 23px}.stack-photo .photo-fallback{inset:8px 8px 23px}.stack-one{transform:rotate(7deg) translate(17px,-8px);z-index:1}.stack-two{transform:rotate(-8deg) translate(-25px,15px);z-index:2}.stack-tape{position:absolute;z-index:3;top:10%;left:22%;background:#e8c3b2;color:#fffaf0;font:italic 13px "Sacramento",cursive;padding:4px 15px;transform:rotate(-7deg)}.message-sparkle{position:absolute;color:#d7a19a;font-size:27px}.sparkle-a{right:5%;top:13%}.sparkle-b{left:53%;bottom:8%}@keyframes vinylSpin{to{transform:rotate(360deg)}}
+/* Finale */
+.scene-finale{display:flex;flex-direction:column;align-items:center;text-align:center;padding:5% 8%}.finale-heading .small-script{font-size:23px;margin:0}.finale-heading h2{font:500 clamp(34px,4.5vw,55px)/.95 "Playfair Display",serif;letter-spacing:1px;margin:8px 0;color:#5c5147}.finale-heading h2 span{font-style:italic;color:#b96e75}.finale-heading>p:last-child{font:italic 11px "Playfair Display",serif;color:#9c8d7d;margin:8px 0 0}.finale-collage{width:77%;height:47%;display:flex;align-items:center;justify-content:center;gap:2%;margin:3% 0 1%}.final-photo{height:100%;width:30%;padding:7px 7px 23px}.final-photo .photo-fallback{inset:7px 7px 23px}.final-photo i{position:absolute;bottom:4px;left:0;right:0;font:italic 13px "Sacramento",cursive;color:#a77d76}.final-left{transform:rotate(-5deg);height:85%}.final-center{transform:rotate(1deg);height:100%;z-index:2}.final-right{transform:rotate(5deg);height:85%}.finale-note{display:flex;gap:19px;align-items:center;font-size:7px;letter-spacing:1.4px;color:#a48e7f}.finale-note b{color:#c47d80;font-size:15px}.replay-button{margin-top:17px;border:1px solid #d8b9a8;background:transparent;color:#9d7c70;padding:8px 14px;font-size:7px;letter-spacing:1.4px;cursor:pointer;transition:background .25s,color .25s}.replay-button:hover{background:#d8a5a0;color:white}.stage-page-number{position:absolute;bottom:5.2%;right:6%;z-index:5;font-size:8px;letter-spacing:1.5px;color:#b09f89}
+.deck-controls{height:56px;display:flex;align-items:center;justify-content:center;gap:25px}.nav-arrow{border:1px solid #d8cbbb;background:#f8f4e9;color:#8e8170;width:29px;height:29px;border-radius:50%;font-size:15px;cursor:pointer;transition:.2s}.nav-arrow:hover:not(:disabled){background:#dba5a0;border-color:#dba5a0;color:white}.nav-arrow:disabled{opacity:.3;cursor:default}.progress-dots{display:flex;align-items:center;gap:8px}.progress-dot{border:0;width:5px;height:5px;border-radius:50%;background:#cbbdad;padding:0;cursor:pointer;transition:all .25s}.progress-dot.active{width:19px;border-radius:8px;background:#c98788}.deck-footer{height:38px;color:#a99c89;font-size:7px;letter-spacing:1.5px}.deck-footer b{color:#c27c7e;font-size:11px;margin-left:5px}
+/* Gift dialog */
+.gift-modal{position:fixed;inset:0;z-index:20;background:rgba(51,43,37,.45);display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}.gift-modal.show{display:flex;animation:fadeIn .25s ease}.gift-modal-card{width:min(430px,95vw);background:#fffaf1;border:1px solid #e8dac8;padding:48px 42px 42px;text-align:center;position:relative;box-shadow:0 25px 75px #2e242044;animation:popIn .35s cubic-bezier(.2,.8,.2,1)}.gift-modal-card:before{content:"";position:absolute;inset:9px;border:1px solid #eadfce;pointer-events:none}.modal-x{position:absolute;right:18px;top:11px;border:0;background:none;font-size:24px;color:#a58a7e;cursor:pointer}.modal-decoration{font-size:17px;color:#d39c94}.gift-modal-card .handwritten{font-size:43px;margin:10px 0}.gift-modal-card>p:nth-of-type(2){font:italic 16px/1.8 "Playfair Display",serif;color:#887568;margin:0}.modal-signoff{display:block;margin-top:25px;font-size:7px;letter-spacing:1.7px;color:#b19a83}@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes popIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:760px){.deck-header{height:53px}.mini-brand{font-size:7px;letter-spacing:1.2px}.deck-status{font-size:7px}.experience{width:94vw;margin-top:4px}.paper-stage{aspect-ratio:auto;min-height:690px;max-height:none;height:calc(100svh - 150px);}.paper-stage:before{inset:9px}.corner{font-size:13px}.scene-mail .mail-content{margin-top:-25px}.mail-title{font-size:52px}.mail-subtitle{font-size:12px}.envelope-illustration{transform:scale(.86)}.envelope-button:hover .envelope-illustration{transform:scale(.86) translateY(-4px)}.envelope-button.opening .envelope-illustration{transform:scale(.86)}.mail-postmark{right:-65px;top:30px;transform:scale(.72) rotate(12deg)}.scene-side-note{bottom:30px;font-size:9px}.scene-birthday{background:linear-gradient(180deg,#f8f4e9 0 52%,#f3ebde 52% 100%)}.birthday-copy{left:9%;top:10%;width:80%}.birthday-copy .small-script{font-size:25px}.birthday-copy h2{font-size:53px;margin:8px 0}.birthday-caption{font-size:11px;margin:13px 0 8px}.birthday-from{margin-top:12px;font-size:7px}.birthday-photo{width:62%;height:42%;right:15%;top:52%;transform:rotate(3deg)}.birthday-stamp{right:7%;top:5%;height:62px;width:62px;font-size:6px}.birthday-doodle.doodle-heart{left:6%;bottom:9%;font-size:35px}.birthday-doodle.doodle-flower{right:7%;bottom:8%;font-size:35px}.birthday-bottom-note{bottom:3%;left:9%;font-size:6px}.scene-letter{grid-template-columns:19% 1fr;gap:3%;padding:12% 6% 10%}.letter-photos{height:80%;gap:9px}.mini-photo{width:100%;min-height:75px;height:23%;padding:4px 4px 10px}.mini-photo .photo-fallback{inset:4px 4px 10px}.photo-fallback small{font-size:6px}.photo-rail-note{font-size:10px}.love-letter-paper{height:92%;padding:8% 7%;}.letter-script{font-size:37px}.letter-salutation{font-size:11px;margin:12px 0 5px}.letter-copy{font-size:10px;line-height:1.65}.letter-copy p{margin-bottom:8px}.letter-sign{font-size:25px}.letter-name{font-size:9px}.letter-decoration{display:none}.letter-doodle{font-size:30px}.scene-gifts{padding:12% 5%}.gift-heading .small-script{font-size:24px}.gift-heading h2{font-size:34px}.gift-heading>p:last-child{font-size:11px}.gift-row{width:100%;gap:1%;margin-top:13%}.gift-spot{width:clamp(82px,25vw,116px);height:clamp(82px,25vw,116px)}.gift-name{font-size:14px}.gift-sub{font-size:6px;letter-spacing:1px}.gift-bottom{font-size:6px;bottom:8%;letter-spacing:1px}.scene-message{grid-template-columns:1fr;grid-template-rows:1.1fr .9fr;gap:0;padding:10% 9% 7%}.message-copy-wrap .small-script{font-size:22px}.message-title{font-size:39px;margin-bottom:8px}.message-paragraph{font-size:10px;line-height:1.65}.message-paragraph p{margin-bottom:7px}.message-sign{font-size:23px;margin:0 0 6px}.song-box{padding-top:7px;gap:9px}.vinyl{width:55px;height:55px}.vinyl-label{width:21px;height:21px}.song-text>span{font-size:8px}.song-actions input{width:125px;padding:5px;font-size:8px}.song-actions button{font-size:6px;padding:0 6px}.message-photo-stack{height:100%;min-height:0}.stack-photo{width:35%;height:94%;padding:5px 5px 16px}.stack-photo .photo-fallback{inset:5px 5px 16px}.stack-one{transform:rotate(7deg) translate(15px,0)}.stack-two{transform:rotate(-8deg) translate(-15px,3px)}.stack-tape{top:0;left:33%;font-size:10px}.sparkle-a{top:45%;right:6%}.sparkle-b{left:10%;bottom:3%}.scene-finale{padding:12% 5%}.finale-heading .small-script{font-size:20px}.finale-heading h2{font-size:38px}.finale-heading>p:last-child{font-size:10px}.finale-collage{width:96%;height:38%;gap:1%;margin:12% 0 6%}.final-photo{padding:5px 5px 19px}.final-photo .photo-fallback{inset:5px 5px 19px}.final-photo i{font-size:10px;bottom:3px}.finale-note{font-size:6px;gap:9px}.replay-button{margin-top:24px;font-size:6px}.stage-page-number{bottom:3%;right:6%;font-size:7px}.deck-controls{height:48px;gap:19px}.deck-footer{height:32px;font-size:5px;letter-spacing:1px}.gift-modal-card{padding:42px 26px 35px}}
+@media(max-width:380px){.mail-title{font-size:44px}.envelope-illustration{transform:scale(.76)}.envelope-button:hover .envelope-illustration,.envelope-button.opening .envelope-illustration{transform:scale(.76)}.birthday-copy h2{font-size:45px}.letter-copy{font-size:9px}.message-paragraph{font-size:9px}.song-actions input{width:105px}.finale-heading h2{font-size:33px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* =========================================================
+   TOQUE DE COLOR + BOTONES MAS VISIBLES (personalizacion)
+   Paleta: rosa frambuesa, coral, durazno y amarillo mantequilla.
+   ========================================================= */
+:root{
+  --paper:#fff8f0;
+  --paper2:#fffaf5;
+  --ink:#57343b;
+  --muted:#a87979;
+  --rose:#f18b9b;
+  --rose2:#ffd0c8;
+  --red:#bd365c;
+  --sage:#91b9a6;
+  --line:#f0c9c0;
+  --shadow:0 25px 70px rgba(128,55,74,.16);
+}
+body{background:linear-gradient(135deg,#ffe9e5 0%,#fff4e9 48%,#fbe2e8 100%);color:#57343b}
+.ambient{color:#ed8297;opacity:.52}
+.brand-heart,.deck-footer b{color:#cf315f}
+.brand-line{background:#e6a6a8}
+.deck-status{color:#a66a75}
+.status-dot{background:#e56b82;box-shadow:0 0 0 3px #e56b8228}
+.paper-stage{background:var(--paper);border:1px solid #efc6bd;box-shadow:0 28px 75px rgba(153,69,85,.18)}
+.paper-stage:before{border-color:#efc6bd}
+.corner{color:#e18a91}
+.tiny-label,.tiny-note{color:#ae7180}
+.mail-title{color:#663a46}
+.mail-title span{color:#e34c78}
+.mail-subtitle{color:#a56d76}
+.envelope-glow{background:#ff9caf;opacity:.32}
+.env-back{background:#f6a8aa;border-color:#d76b7c}
+.env-front-left{background:#e9798e}
+.env-front-right{background:#f18d9b}
+.env-front-bottom{background:#ffc0b5}
+.env-flap{background:#eb718a}
+.letter-peek{background:#fffaf1;border-color:#e8c9b6}
+.letter-peek-heart{color:#d94b75}
+.letter-peek-lines{background:repeating-linear-gradient(to bottom,transparent 0 8px,#f0c9c1 8px 9px)}
+.wax-seal{background:#a91e4b;color:#fff0dc;box-shadow:0 3px 9px #7f294855}
+.tap-instruction{color:#a66d78}
+.tap-star,.birthday-doodle,.gift-bottom span{color:#e34d78}
+.mail-postmark{border-color:#e4a4a1;color:#b86b75}
+.scene-side-note{color:#ae7f80}
+.scene-birthday{background:linear-gradient(110deg,#fff8f0 0 53%,#ffe8df 53% 100%)}
+.birthday-copy h2{color:#633b43}
+.birthday-copy h2 span,.finale-heading h2 span{color:#d93e70}
+.birthday-caption{color:#a66e77}
+.underline-scribble{border-color:#e36b83}
+.birthday-from,.birthday-bottom-note{color:#a56e78}
+.photo-frame{box-shadow:0 13px 26px rgba(119,54,67,.18)}
+.photo-fallback{background:linear-gradient(145deg,#ffc9c2,#ffe8ca 55%,#f5b9c9);color:#8e5261}
+.photo-fallback span{color:#fff8ed;text-shadow:0 2px 8px #b8586b55}
+.photo-tape{background:#ffcb8fbb}
+.photo-caption-tag{color:#c53f67}
+.birthday-stamp{border-color:#e5a0a0;color:#bd526b;background:#fff5edaa}
+.scene-letter{background:linear-gradient(135deg,#fff5eb 0%,#ffe8e6 100%)}
+.love-letter-paper{background:#fffdf6;border-color:#f0d1c2;box-shadow:0 14px 30px rgba(120,70,63,.13)}
+.love-letter-paper:before{border-color:#f4dfd2}
+.paper-topline{color:#ae7180}
+.letter-salutation{color:#a05d6b}
+.letter-copy{color:#775660}
+.letter-sign,.letter-name{color:#c53e67}
+.letter-doodle,.photo-rail-note{color:#e47e91}
+.tiny-envelope{background:#ffd8cf;border-color:#df9b9a}
+.scene-gifts{background:radial-gradient(circle at 50% 43%,#fff9ef 0,#fff0e8 63%,#ffe2e4 100%)}
+.gift-heading h2{color:#633b43}
+.gift-heading>p:last-child{color:#a56d78}
+.gift-spot{box-shadow:0 8px 19px rgba(152,75,83,.12);border:1px solid #efc0b9}
+.spot-pink{background:linear-gradient(145deg,#ffc1c8,#ffe0d1)}
+.spot-yellow{background:linear-gradient(145deg,#ffe69d,#ffcfb5)}
+.spot-blue{background:linear-gradient(145deg,#bce8db,#d7e9ef)}
+.gift-item{color:#683e49}
+.gift-item:hover .gift-spot{box-shadow:0 14px 28px rgba(194,65,99,.22)}
+.gift-name{color:#673b47}
+.gift-sub{color:#c13d65;font-weight:700}
+.gift-bottom{color:#a66c78}
+.scene-message{background:linear-gradient(110deg,#fff9f0 0%,#ffede9 100%)}
+.message-title,.message-sign{color:#c63c68}
+.message-paragraph{color:#77545d}
+.song-box{border-color:#efc6bc}
+.vinyl{box-shadow:0 5px 13px rgba(141,53,76,.22)}
+.vinyl-label{background:#e34e78;color:#fff8eb}
+.song-text>b{color:#b34b69}
+.song-text>span{color:#946a70}
+.song-actions input{border-color:#edc2bd;background:#fffaf4;color:#68444e;border-radius:7px}
+.song-actions input:focus{border-color:#db5478;box-shadow:0 0 0 3px #db54781c}
+.song-actions button{border:0;border-radius:7px;background:#c93463;color:#fff8f1;font-weight:700;padding:8px 12px;box-shadow:0 5px 12px #bd365c35;transition:transform .2s,background .2s}
+.song-actions button:hover{background:#a91e4b;transform:translateY(-2px)}
+.scene-finale{background:radial-gradient(circle at 50% 25%,#fffaf0 0,#ffede9 75%,#ffe1e4 100%)}
+.finale-heading h2{color:#623b45}
+.finale-heading>p:last-child{color:#a46f78}
+.finale-note{color:#a86676}
+.finale-note b{color:#d93e70}
+.replay-button{border:0;border-radius:999px;background:linear-gradient(135deg,#e84e78,#bc285b);color:#fffaf4;padding:12px 23px;font-size:9px;font-weight:700;letter-spacing:1.4px;box-shadow:0 8px 20px rgba(189,54,92,.27);transition:transform .2s,box-shadow .2s,filter .2s}
+.replay-button:hover{background:linear-gradient(135deg,#d83c6b,#a91e4b);color:white;transform:translateY(-3px);box-shadow:0 12px 24px rgba(189,54,92,.34)}
+/* Navegacion inferior: ahora las acciones se distinguen a simple vista */
+.deck-controls{height:72px;gap:19px}
+.nav-arrow{width:auto;min-width:128px;height:42px;border:1px solid #e6a5a8;border-radius:999px;background:#fff8f0;color:#a63c5d;font-size:10px;font-weight:700;letter-spacing:1px;padding:0 17px;display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:0 5px 14px rgba(155,65,83,.11);transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.nav-arrow .arrow-symbol{font-size:17px;line-height:1}
+.nav-arrow:hover:not(:disabled){background:#c93463;border-color:#c93463;color:#fff;transform:translateY(-2px);box-shadow:0 8px 18px rgba(189,54,92,.25)}
+.nav-arrow:disabled{opacity:.62;background:#f1e2dc;color:#ae8d88;border-color:#ead3ca;box-shadow:none}
+.progress-dots{gap:9px;padding:8px 13px;border:1px solid #f0c9c0;border-radius:999px;background:#fff8f0;box-shadow:0 4px 12px rgba(155,65,83,.08)}
+.progress-dot{width:8px;height:8px;background:#e8b8b4;border:0}
+.progress-dot:hover{background:#d85b7a;transform:scale(1.2)}
+.progress-dot.active{width:25px;height:8px;background:#c93463;box-shadow:0 0 0 3px #c9346318}
+.deck-footer{color:#a56f78}
+.deck-footer b{color:#cc315f}
+.gift-modal{background:rgba(87,35,53,.55)}
+.gift-modal-card{background:#fff8f0;border-color:#edc6bb;box-shadow:0 25px 75px rgba(70,26,43,.3)}
+.gift-modal-card:before{border-color:#f2d9cc}
+.modal-decoration{color:#e34d78}
+.gift-modal-card .handwritten{color:#c63866}
+.gift-modal-card>p:nth-of-type(2){color:#77545d}
+.modal-signoff{color:#b66e7d}
+.modal-x{color:#b33e62}
+@media(max-width:760px){
+  .deck-controls{height:62px;gap:8px}
+  .nav-arrow{min-width:90px;height:37px;padding:0 10px;gap:5px;font-size:8px;letter-spacing:.6px}
+  .nav-arrow .arrow-symbol{font-size:15px}
+  .progress-dots{gap:6px;padding:7px 9px}
+  .progress-dot{width:7px;height:7px}
+  .progress-dot.active{width:18px;height:7px}
+  .deck-footer{color:#9e6470}
+  .replay-button{font-size:8px;padding:11px 18px}
+}
+@media(max-width:360px){
+  .nav-arrow{min-width:78px;font-size:7px;padding:0 7px}
+  .deck-controls{gap:6px}
+  .progress-dots{gap:5px;padding:7px}
+}
