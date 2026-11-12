@@ -148,3 +148,74 @@ body{background:linear-gradient(135deg,#ffe9e5 0%,#fff4e9 48%,#fbe2e8 100%);colo
   .deck-controls{gap:6px}
   .progress-dots{gap:5px;padding:7px}
 }
+
+
+
+/* =========================================
+   AJUSTE EXCLUSIVO DE LA CARTA DE AMOR
+   ========================================= */
+
+/* Centrar la hoja y aprovechar mejor su espacio */
+.scene-letter .love-letter-paper {
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 28px 38px 30px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+}
+
+/* Quitar el título A Love Letter */
+.scene-letter .letter-script {
+    display: none !important;
+}
+
+/* Ajustar la parte superior */
+.scene-letter .paper-topline {
+    margin-bottom: 12px !important;
+}
+
+/* Centrar el saludo */
+.scene-letter .letter-salutation {
+    text-align: center !important;
+    margin: 5px 0 12px !important;
+    position: relative;
+    z-index: 3;
+}
+
+/* Aprovechar todo el ancho de la hoja */
+.scene-letter .letter-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    position: relative;
+    z-index: 3;
+}
+
+/* Ajustar el texto para que entre completo */
+.scene-letter .letter-copy p {
+    font-size: clamp(13px, 1.05vw, 15px) !important;
+    line-height: 1.42 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    position: relative;
+    z-index: 3;
+}
+
+/* Evitar que los adornos tapen las palabras */
+.scene-letter .letter-decoration {
+    z-index: 0 !important;
+}
+
+.scene-letter .love-letter-paper::after {
+    right: 15px !important;
+    bottom: 12px !important;
+    transform: scale(0.75) !important;
+    opacity: 0.55 !important;
+    pointer-events: none;
+}
