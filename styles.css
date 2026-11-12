@@ -219,3 +219,102 @@ body{background:linear-gradient(135deg,#ffe9e5 0%,#fff4e9 48%,#fbe2e8 100%);colo
     opacity: 0.55 !important;
     pointer-events: none;
 }
+
+
+/* =========================================
+   AJUSTE GENERAL: TODO EN UNA SOLA PANTALLA
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+.deck-header {
+    flex: 0 0 64px;
+    height: 64px;
+}
+
+/* Área principal */
+.experience {
+    width: min(1120px, 94vw);
+    flex: 1 1 0;
+    min-height: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Escenario: ocupa todo el espacio disponible */
+.paper-stage {
+    width: 100%;
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+}
+
+/* Botones de navegación */
+.deck-controls {
+    flex: 0 0 72px;
+    height: 72px;
+}
+
+/* Pie de página */
+.deck-footer {
+    flex: 0 0 38px;
+    height: 38px;
+}
+
+/* =========================================
+   AJUSTES PARA CELULARES
+   ========================================= */
+
+@media (max-width: 760px) {
+
+    .deck-header {
+        flex: 0 0 53px;
+        height: 53px;
+    }
+
+    .experience {
+        width: 94vw;
+        flex: 1 1 0;
+        min-height: 0;
+        margin: 0 auto;
+    }
+
+    .paper-stage {
+        flex: 1 1 0;
+        min-height: 0;
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+    }
+
+    .deck-controls {
+        flex: 0 0 62px;
+        height: 62px;
+    }
+
+    .deck-footer {
+        flex: 0 0 32px;
+        height: 32px;
+    }
+}
