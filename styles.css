@@ -454,3 +454,125 @@ body {
     }
 }
 
+
+/* =========================================
+   DETALLES FINALES: PORTADA Y CUMPLEAÑOS
+   ========================================= */
+
+/* PORTADA: textos ligeramente más grandes */
+.scene-mail .tiny-label {
+    font-size: 10px !important;
+    letter-spacing: 3.3px;
+}
+
+.scene-mail .mail-title {
+    font-size: clamp(49px, 5.5vw, 72px) !important;
+}
+
+.scene-mail .mail-subtitle {
+    font-size: 15px !important;
+}
+
+.scene-mail .tap-instruction {
+    font-size: 9px !important;
+}
+
+.scene-mail .mail-postmark {
+    font-size: 9px !important;
+}
+
+.scene-mail .scene-side-note {
+    font-size: 12px !important;
+}
+
+/* FLORES Y CORAZONES DECORATIVOS EN LA PORTADA */
+.scene-mail::before,
+.scene-mail::after {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    white-space: pre;
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 3.2vw, 39px);
+    line-height: 1.55;
+    color: #e87591;
+    opacity: .48;
+    text-shadow: 0 4px 12px rgba(190, 65, 100, .12);
+    animation: detallesFlotantes 5s ease-in-out infinite;
+}
+
+.scene-mail::before {
+    content: "✿\A♡\A✧";
+    left: 9%;
+    top: 24%;
+    transform: rotate(-12deg);
+}
+
+.scene-mail::after {
+    content: "♡\A✿\A♡";
+    right: 9%;
+    bottom: 17%;
+    transform: rotate(12deg);
+    animation-delay: -2.5s;
+}
+
+/* Movimiento suave de los adornos */
+@keyframes detallesFlotantes {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -9px;
+    }
+}
+
+/* CUMPLEAÑOS: un tono más oscuro y un poco más grandes */
+.scene-birthday .birthday-caption {
+    color: #914f5e !important;
+    font-size: 15px !important;
+}
+
+.scene-birthday .birthday-from {
+    color: #925363 !important;
+    font-size: 9px !important;
+}
+
+/* Ajustes para celulares */
+@media(max-width:760px) {
+    .scene-mail .mail-title {
+        font-size: 54px !important;
+    }
+
+    .scene-mail .mail-subtitle {
+        font-size: 13px !important;
+    }
+
+    .scene-mail .tiny-label {
+        font-size: 9px !important;
+    }
+
+    .scene-mail .tap-instruction {
+        font-size: 8px !important;
+    }
+
+    .scene-mail::before {
+        left: 4%;
+        top: 25%;
+        font-size: 24px;
+    }
+
+    .scene-mail::after {
+        right: 4%;
+        bottom: 16%;
+        font-size: 24px;
+    }
+
+    .scene-birthday .birthday-caption {
+        font-size: 12px !important;
+    }
+
+    .scene-birthday .birthday-from {
+        font-size: 8px !important;
+    }
+}
+
