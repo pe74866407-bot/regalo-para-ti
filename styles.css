@@ -1464,3 +1464,156 @@ body {
         font-size: 7px;
     }
 }
+
+
+/* ==============================================
+   CORRECCIONES FINALES PARA CELULARES VERTICALES
+   SOLO ESCENAS 3, 5 Y 6
+   ============================================== */
+
+@media screen and (max-width: 760px) and (orientation: portrait) {
+
+    /* ------------------------------------------
+       ESCENA 3: CARTA DE AMOR
+       ------------------------------------------ */
+
+    .scene-letter .love-letter-paper {
+        height: 100% !important;
+        max-height: 100% !important;
+        min-height: 0 !important;
+        padding: 12px 16px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        justify-content: flex-start !important;
+    }
+
+    .scene-letter .paper-topline {
+        margin-bottom: 5px !important;
+    }
+
+    .scene-letter .letter-salutation {
+        font-size: 12px !important;
+        margin: 4px 0 7px !important;
+    }
+
+    .scene-letter .letter-copy {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .scene-letter .letter-copy p {
+        font-size: clamp(10px, 2.7vw, 12px) !important;
+        line-height: 1.32 !important;
+        text-align: justify !important;
+        margin: 0 !important;
+    }
+
+
+    /* ------------------------------------------
+       ESCENA 5: DEDICATORIA Y SPOTIFY
+       ------------------------------------------ */
+
+    .scene-message {
+        grid-template-rows: minmax(0, 1.2fr) minmax(0, .8fr) !important;
+        gap: 0 !important;
+    }
+
+    .scene-message .message-copy-wrap {
+        min-height: 0;
+        justify-content: center;
+    }
+
+    .scene-message .message-photo-stack {
+        height: 88% !important;
+        min-height: 0 !important;
+        align-self: start !important;
+        margin-top: -9px !important;
+        transform: translateY(-5px);
+    }
+
+    .scene-message .stack-photo {
+        height: 90% !important;
+    }
+
+
+    /* ------------------------------------------
+       ESCENA 6: COLLAGE FINAL
+       FOTOGRAFIAS SIEMPRE HORIZONTALES
+       ------------------------------------------ */
+
+    .scene-finale .finale-collage {
+        width: 94% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 2% !important;
+        margin: 6% auto 4% !important;
+    }
+
+    .scene-finale .final-photo,
+    .scene-finale .final-left,
+    .scene-finale .final-center,
+    .scene-finale .final-right {
+        width: 31% !important;
+        flex: 0 0 31% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 4 / 3 !important;
+        padding: 5px 5px 17px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Evitar que las imágenes se deformen */
+    .scene-finale .final-photo img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .scene-finale .final-photo .photo-fallback {
+        inset: 5px 5px 17px !important;
+    }
+
+    .scene-finale .final-photo i {
+        font-size: 9px !important;
+        bottom: 2px !important;
+    }
+
+    .scene-finale .finale-heading {
+        flex: 0 0 auto;
+    }
+
+    .scene-finale .finale-note {
+        flex: 0 0 auto;
+    }
+
+    .scene-finale .replay-button {
+        flex: 0 0 auto;
+    }
+}
+
+/* AJUSTE ADICIONAL PARA CELULARES ESTRECHOS */
+@media screen and (max-width: 380px) and (orientation: portrait) {
+
+    .scene-letter .letter-copy p {
+        font-size: 10px !important;
+        line-height: 1.28 !important;
+    }
+
+    .scene-message {
+        grid-template-rows: minmax(0, 1.25fr) minmax(0, .75fr) !important;
+    }
+
+    .scene-finale .final-photo,
+    .scene-finale .final-left,
+    .scene-finale .final-center,
+    .scene-finale .final-right {
+        width: 31% !important;
+        flex-basis: 31% !important;
+        aspect-ratio: 4 / 3 !important;
+    }
+}
