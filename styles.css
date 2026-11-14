@@ -318,3 +318,139 @@ body {
         height: 32px;
     }
 }
+
+
+/* PEQUEÑOS AJUSTES EN LA PORTADA DE CUMPLEAÑOS */
+
+/* Un poquito más grande, manteniendo las diferencias */
+.scene-birthday .birthday-copy .small-script {
+    font-size: 31px;
+}
+
+.scene-birthday .birthday-caption {
+    font-size: 14px;
+}
+
+.scene-birthday .birthday-from {
+    font-size: 9px;
+}
+
+.scene-birthday .photo-caption-tag {
+    font-size: 14px;
+}
+
+/* Detalles decorativos */
+.scene-birthday .doodle-heart {
+    font-size: 49px;
+}
+
+.scene-birthday .doodle-flower {
+    font-size: 50px;
+}
+
+.scene-birthday .birthday-bottom-note {
+    font-size: 9px;
+}
+
+/* Ajuste equivalente para celulares */
+@media(max-width:760px) {
+    .scene-birthday .birthday-copy .small-script {
+        font-size: 27px;
+    }
+
+    .scene-birthday .birthday-caption {
+        font-size: 12px;
+    }
+
+    .scene-birthday .birthday-from {
+        font-size: 8px;
+    }
+
+    .scene-birthday .doodle-heart {
+        font-size: 37px;
+    }
+
+    .scene-birthday .doodle-flower {
+        font-size: 37px;
+    }
+
+    .scene-birthday .birthday-bottom-note {
+        font-size: 7px;
+    }
+}
+
+
+/* FOTOS UN POQUITO MÁS GRANDES EN LA CARTA */
+.scene-letter .letter-photos {
+    height: 86%;
+    gap: 10px;
+}
+
+.scene-letter .mini-photo {
+    width: 92%;
+    height: 29%;
+}
+
+.scene-letter .p-three {
+    width: 84%;
+}
+
+/* TEXTO DE LA NUEVA DEDICATORIA */
+.scene-message .message-copy-wrap {
+    min-width: 0;
+}
+
+.scene-message .message-title {
+    font-size: clamp(30px, 3.2vw, 42px);
+    line-height: 1.1;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.scene-message .message-paragraph {
+    font-size: clamp(10px, .95vw, 11px);
+    line-height: 1.55;
+    max-width: 520px;
+    text-align: justify;
+}
+
+.scene-message .message-paragraph p {
+    margin: 0;
+}
+
+.scene-message .song-box {
+    margin-top: 10px;
+}
+
+/* Adaptación para celulares */
+@media(max-width:760px) {
+    .scene-letter .letter-photos {
+        height: 82%;
+        gap: 7px;
+    }
+
+    .scene-letter .mini-photo {
+        width: 100%;
+        height: 25%;
+    }
+
+    .scene-letter .p-three {
+        width: 100%;
+    }
+
+    .scene-message {
+        grid-template-rows: 1.25fr .75fr;
+        padding: 7% 8% 4%;
+    }
+
+    .scene-message .message-title {
+        font-size: 29px;
+        margin-bottom: 6px;
+    }
+
+    .scene-message .message-paragraph {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+}
+
